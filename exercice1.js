@@ -1,11 +1,12 @@
-a = 42;
-b = "Bonjour";
-c = true;
-d = null;
+let a = 42;
+let b = "Bonjour";
+let c = true;
+let d = null;
 let e;
-f = [1, 2, 3];
-g = { nom: "Ali" };
-h = NaN;
+let f = [1, 2, 3];
+let g = { nom: "Ali" };
+let h = NaN;
+
 console.log(a +"->" + typeof(a) );
 console.log(b +"->" + typeof(b) );
 console.log(c +"->" + typeof(c) );

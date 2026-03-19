@@ -7,30 +7,36 @@ let derniereConnexion = null
 let nombreConnexions = "0"
 console.log("===== RAPPORT UTILISATEUR =====");
 let nomModifier= nom.trim();
-if (nomModifier==null){
+if (nomModifier=== ""){
     console.log("Inconu");
 }
 else{
     console.log(`nom : ${nomModifier} (corrigé : espaces supprimés)`)
 
 }
-if(Number(age)==NaN || Number(age)<=0){
+let ageModifier = Number(age);
+if (Number.isNaN(ageModifier) || ageModifier <= 0) {
     console.log("age : valeur invalide");
 }
 else{
-    console.log(`age: ${age} (valide)`);
+    console.log(`age: ${ageModifier} (valide)`);
 }
-emailAt=email.indexOf("@");
-emailPoint=email.indexOf(".");
-if(emailAt !== -1 && emailPoint > emailAt){
-     console.log("email : (Valide )");
+let indexAt = email.indexOf("@") 
+
+if (indexAt === -1) {
+  console.log("invalide : pas de @")
 } else {
-     console.log("email :" + email +" (invalide : pas de point après @) valide");
-    
+  let indexPoint = email.indexOf(".", indexAt)
+
+  if (indexPoint === -1) {
+    console.log("invalide : pas de point après @")
+  } else {
+    console.log("valide")
+  }
 }
-scoreModifier=parseInt(scoreJeu);
-if(scoreModifier==NaN){
-    return 0;
+let scoreModifier=parseInt(scoreJeu);
+if (Number.isNaN(scoreModifier)){
+    scoreModifier=0;
 }
 else{
     console.log("scoreJeu : " + scoreModifier + "(extrait depuis "+scoreJeu+")");
@@ -43,7 +49,7 @@ else{
 }
 console.log("derniereConnection : ", derniereConnexion ?? "jamais connecté");
 
-nombreConnexionsModifier= Number(nombreConnexions);
+let nombreConnexionsModifier= Number(nombreConnexions);
 if(nombreConnexionsModifier==0){
     console.log("nombreConnections :  Aucune Connection ");
 }

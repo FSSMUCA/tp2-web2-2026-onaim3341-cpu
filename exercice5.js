@@ -8,15 +8,15 @@ for(let i=0;i<nombres.length;i++){
     console.log(nombres[i] + " -> " + "INFINI");
 
     }
-    else if(1/nombres[i]=== -Infinity){
+    else if(nombres[i] === 0 && 1/nombres[i]=== -Infinity){
     console.log(nombres[i] + " -> " + "ZERO NEGATIF");
 
     }
-    else if(Number.isInteger(nombres[i])){
+    else if(Number.isInteger(nombres[i]) && Math.abs(nombres[i]) <= Number.MAX_SAFE_INTEGER){
     console.log(nombres[i] + " -> " + "ENTIER SUR");
 
     }
-    else if(nombres[i]> Number.MAX_SAFE_INTEGER ){
+    else if(Number.isInteger(nombres[i]) &&  Math.abs(nombres[i]) > Number.MAX_SAFE_INTEGER){
     console.log(nombres[i] + " -> " + "ENTIER HORS LIMITES");
 
     }
